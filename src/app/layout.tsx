@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,8 +29,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        {/* Navigation Bar */}
+        <nav className="w-full flex items-center justify-between px-6 py-3 border-b bg-white/80 backdrop-blur sticky top-0 z-50">
+          <Link href="/" className="text-xl font-bold tracking-tight">
+            <Image
+              src="/icons8-bingo-64.svg"
+              alt="Bingo Logo"
+              className="inline-block w-8 h-8 mr-2 align-middle"
+              width={64}
+              height={64}
+            />
+          </Link>
+          <Button variant="outline">
+            <Link href="/login">Login</Link>
+          </Button>
+        </nav>
         {children}
       </body>
     </html>
