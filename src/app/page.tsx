@@ -11,8 +11,9 @@ export default function Home() {
         </p>
         <div className="flex flex-col gap-4 w-full max-w-xs items-center">
           <Button asChild className="w-full">
-            <Link href="/create">Create new Bingo Session</Link>
+            <Link href="/login">Login</Link>
           </Button>
+          or
           <Button asChild className="w-full">
             <Link href="/join">Join an Existing Bingo Session</Link>
           </Button>
