@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import icon from "@/assets/icons/bluesky.svg";
+import Icon from "@/app/assets/icons/butterfly.svg";
 
 const LoginButton = () => {
   return (
     <Button variant="outline" className="w-full">
       <Image
-        src={icon}
+        src={Icon}
         alt="Bluesky Icon"
         width={20}
         height={20}
